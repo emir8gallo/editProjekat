@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <th:block th:include="home :: head"></th:block>
+</head>
+<body>
+<th:block th:include="home :: top-navbar"></th:block>
+<div class="container-fluid" style="margin-top: 5%">
+    <table class="table table-striped" style="width: 100%">
+        <tr>
+            <th>Reserved By</th>
+            <th>Route ID</th>
+            <th>Reserved seats</th>
+        </tr>
+        <!--</table>-->
+        <!--<table>-->
+        <th:block th:each="reservation : ${reservations}">
+            <tr>
+                <td th:text="${reservation.user.name}">...</td>
+                <td th:text="${reservation.route.id}">...</td>
+                <td th:text="${reservation.reservedSeats}">...</td>
+                <td><a class="btn btn-sm btn-danger" th:href="@{deleteReservation/{id}(id=${reservation.id})}">Delete</a></td>
+            </tr>
+        </th:block>
+    </table>
+</div>
+
+</body>
+</html>

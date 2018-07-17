@@ -1,0 +1,16 @@
+com\viber_bot\car_sharing\config\BotConfig.class
+com\viber_bot\car_sharing\repository\RouteRepository.class
+com\viber_bot\car_sharing\service\ConversationService.class
+com\viber_bot\car_sharing\repository\UserRepository.class
+com\viber_bot\car_sharing\service\ViberBotService.class
+com\viber_bot\car_sharing\controller\ViberBotController.class
+com\viber_bot\car_sharing\model\User.class
+com\viber_bot\car_sharing\service\UserService.class
+com\viber_bot\car_sharing\repository\ReservationRepository.class
+com\viber_bot\car_sharing\service\ReservationService.class
+com\viber_bot\car_sharing\model\Route.class
+com\viber_bot\car_sharing\service\RouteService.class
+com\viber_bot\car_sharing\controller\RouteController.class
+com\viber_bot\car_sharing\CarSharingApplication.class
+com\viber_bot\car_sharing\config\BotStartupConfig.class
+com\viber_bot\car_sharing\model\Reservation.class

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <th:block th:include="home :: head"></th:block>
+</head>
+<body>
+    <th:block th:include="home :: top-navbar"></th:block>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <form style="margin-top: 5%" th:action="@{/addRoute}" method='post'>
+                    <div class="form-group">
+                        <label>Enter start:</label>
+                        <input class="form-control" type="text" th:name="start" placeholder="Start" required="true">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-10 col-sm-2">Enter destination:</label>
+                        <input class="form-control" type="text" th:name="destination" placeholder="Destination" required="true">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Enter date:</label>
+                        <input class="form-control" type="date" th:name="date" placeholder="Date" required="true">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Enter time:</label>
+                        <input class="form-control" type="time" th:name="time" placeholder="Time" required="true">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-10 col-sm-2">Enter available seats:</label>
+                        <input class="form-control" type="number" th:name="availableSeats" placeholder="Available seats" required="true">
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-1 col-sm-10 text-center">
+                            <button class="btn button" type="submit">Submit route</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head th:fragment="head">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ViberBotCarSharing</title>
+    <!-- Bootstrap -->
+    <link href= "../css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <!--Font Awesome-->
+    <link href="../css/bootstrap/font-awesome.min.css" rel="stylesheet" />
+    <!--Sidebar-->
+    <link href="../css/sidebar.css" rel="stylesheet" />
+    <!--Custom css-->
+    <link href="../css/signin.css" rel="stylesheet" />
+    <link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet" />
+</head>
+
+<!--overflow-x: hidden; je zbog horizontalnih scrollova koji se pojavljuju kada se koristi row-->
+<body style="overflow-x: hidden;">
+<th:block th:fragment="top-navbar">
+    <!--top navbar-->
+    <div id="top-navbar" class="navbar navbar-fixed-top navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">CarSharingViberBot</a>
+                <a class="navbar-brand" href="/routes">Routes</a>
+                <a class="navbar-brand" href="/reservations">Reservations</a>
+                <a class="navbar-brand" href="/logout">Logout</a>
+            </div>
+
+            <!-- /.nav-collapse -->
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /.navbar -->
+</th:block>
+
+<!--side navbar-->
+<!--/.container-->
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<div th:fragment="scripts">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('[data-toggle=offcanvas]').click(function() {
+                $('.row-offcanvas').toggleClass('active');
+            });
+        });
+    </script>
+</div>
+
+</body>
+</html>
